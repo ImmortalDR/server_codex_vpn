@@ -1,0 +1,9 @@
+[Unit]
+Description=Hourly health check and VLESS key rotation
+After=network-online.target xray-vpn.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/sbin/xray-vpn-manage.py rotate
+Nice=10

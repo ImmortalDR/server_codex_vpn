@@ -1,0 +1,22 @@
+[Unit]
+Description=Xray VPN lightweight control UI
+After=network-online.target xray-vpn.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/xray-vpn-ui.py
+Restart=always
+RestartSec=2
+WorkingDirectory=/etc/xray-vpn
+Environment=PYTHONUNBUFFERED=1
+
+# harden a bit
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/etc/xray-vpn /var/log/xray-vpn
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

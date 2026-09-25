@@ -1,0 +1,14 @@
+# Runtime secrets — never publish
+nodes.json
+config.json
+state.json
+current_index
+ui.token
+*.token
+/etc-runtime/
+
+# Logs / Python
+*.log
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,8 @@
+# Sourced by VS Code / Cursor Remote before the server starts.
+# Copy to ~/.vscode-server/server-env-setup and ~/.cursor-server/server-env-setup
+if [ -f /etc/xray-vpn/proxy.env ]; then
+  set -a
+  # shellcheck disable=SC1091
+  . /etc/xray-vpn/proxy.env
+  set +a
+fi

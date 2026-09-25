@@ -1,0 +1,12 @@
+[Unit]
+Description=Run xray-vpn health check every hour
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+AccuracySec=1min
+Persistent=true
+Unit=xray-vpn-health.service
+
+[Install]
+WantedBy=timers.target

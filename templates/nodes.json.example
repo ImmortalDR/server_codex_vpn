@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Exit-1",
+    "address": "YOUR_HOST_OR_IP",
+    "port": 8444,
+    "uuid": "00000000-0000-0000-0000-000000000000",
+    "pbk": "YOUR_REALITY_PUBLIC_KEY",
+    "sid": "",
+    "sni": "github.com",
+    "fp": "chrome",
+    "serviceName": "GunService"
+  }
+]
